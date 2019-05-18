@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "UIs/*"
+  ],
+  "version": "independent"
+}
