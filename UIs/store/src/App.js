@@ -7,7 +7,6 @@ import NavBar from './compoments/_/organisms/NavBar/NavBar';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Catalog} />

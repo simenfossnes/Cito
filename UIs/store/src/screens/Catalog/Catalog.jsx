@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import './Catalog.styles.css';
 import dummyApps from '../../data/dummyApps';
+import NavBar2 from '../../compoments/_/organisms/NavBar/NavBar';
 
 import icon1 from '../../images/main-app-icon.png';
 
@@ -80,8 +81,11 @@ class Catalog extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="CatalogWrapper" style={{padding: "3vw", height:"100%", overflow: "scroll"}}>
-        <Grid1 />
+      <div>
+      <NavBar2/>
+        <div className="CatalogWrapper" style={{padding: "3vw", height:"100%", overflow: "scroll"}}>
+          <Grid1 />
+        </div>
       </div>
     );
   }
