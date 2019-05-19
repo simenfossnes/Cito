@@ -1,0 +1,51 @@
+.navbar {
+    box-sizing: content-box;
+    height: 48px;
+    min-width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48;
+    min-width: 1024px;
+    z-index: 9997;
+    display: block;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 48px;
+    transition: background-color 0.5s ease 0.7s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background::after {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.2);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    height: 1px;
+    z-index: 1;
+}
+
+.content {
+    padding: 0 16px;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}

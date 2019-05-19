@@ -2,6 +2,61 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './Catalog.styles.css';
 
+import icon1 from '../../images/main-app-icon.png';
+
+class AppBase extends PureComponent {
+
+  render() {
+    return <div style={{width: "100%", height: "100%"}} align="center" >
+            <div className="module" style={{"background": `url(${icon1})`, "backgroundSize": "contain"}}>
+              <header>
+                <h1>
+                  FacePalm
+                </h1>
+              </header>
+            </div>
+          </div>;
+  }
+}
+
+class Grid1 extends PureComponent {
+
+  render() {
+    return <div className="grid_unequal">
+            <div className="item_1 items_all">
+              <AppBase />
+            </div>
+            <div className="item_2 items_all"><AppBase /></div>
+            <div className="item_3 items_all"><AppBase /></div>
+          </div>;
+  }
+}
+
+class Grid2 extends PureComponent {
+
+  render() {
+    return <div className="grid_equal">
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+            <div className="items_all"><AppBase /></div>
+          </div>;
+  }
+}
+
 class Catalog extends PureComponent { 
   constructor(props) {
     super(props);
@@ -9,7 +64,7 @@ class Catalog extends PureComponent {
     this.state = {
       hasError: false,
     };
-  }
+  } 
 
   componentDidMount = () => {
     console.log('Catalog mounted');
@@ -45,8 +100,11 @@ class Catalog extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="CatalogWrapper">
-        Catalog
+      <div className="CatalogWrapper" style={{padding: "3vw", height:"100%", overflow: "scroll"}}>
+        <Grid1 />
+        <div style={{paddingTop: "2vw"}}>
+          <Grid2 />
+        </div>
       </div>
     );
   }

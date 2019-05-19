@@ -1,0 +1,86 @@
+.heroSection {
+    margin: 0 24px;
+    padding: 24px 0;
+}
+
+.imageSection {
+    flex-shrink: 0;
+    width: 38.38308%;
+    vertical-align: top !important;
+    align-self: start;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 13px;
+}
+
+.heroImageWrapper {
+    width: 100%;
+}
+
+.heroImage {
+    width: 100%;
+}
+
+.infoSection {
+    flex-shrink: 0;
+    width: 55.04975%;
+    max-width: 55.04975%;
+    vertical-align: top !important;
+    align-self: start;
+    margin-left: 3.28358%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 13px;
+    margin-left: 3.28358%;
+}
+
+.header {
+    margin-bottom: 2px;
+    display: block;
+    font-size: 18px;
+    line-height: 1.2223;
+    font-weight: 600;
+    letter-spacing: 0.027em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Apple WebExp Icons Custom",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #111;
+}
+
+.subHeader {
+    font-size: 13px;
+    line-height: 1.38462;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Apple WebExp Icons Custom",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.buttonContainer {
+    margin-top: 6px;
+    width: 100%;
+}
+
+.button {
+    padding: 7px 8px 5px;
+    animation: we-button-fade-in 0.2s;
+    font-size: 13px;
+    line-height: 1.38462;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Apple WebExp Icons Custom",
+ "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-color: #0070c9;
+    background: 0 0;
+    color: #0070c9;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+}

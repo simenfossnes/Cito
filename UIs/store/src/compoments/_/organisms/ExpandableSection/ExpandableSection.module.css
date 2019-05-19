@@ -1,0 +1,33 @@
+.expandableSection {
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.5%;
+}
+
+.heading {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.024em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Apple WebExp Icons Custom",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.subSectionWrapper {
+    margin-left: -3.39506%;
+    padding: 0;
+    font-size: 0;
+}
+
+.subHeading {
+    margin-bottom: 16px;
+    padding-top: 2px;
+    margin-left: 3.28358%;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.contentWrapper {
+    font-size: 13px;
+    margin-left: 3.28358%;
+}

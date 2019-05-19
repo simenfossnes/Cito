@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './Cito.styles.css';
+import './CitoInfo.styles.css';
+import CitoTemplate from '../../compoments/_/templates/CitoTemplate/CitoTemplate';
 
-class Cito extends PureComponent { 
+class CitoInfo extends PureComponent { 
   constructor(props) {
     super(props);
 
@@ -12,7 +13,7 @@ class Cito extends PureComponent {
   }
 
   componentDidMount = () => {
-    console.log('Cito mounted');
+    console.log('CitoInfo mounted');
   }
 
   static getDerivedStateFromError(error) {
@@ -25,19 +26,19 @@ class Cito extends PureComponent {
   }
 
   getDerivedStateFromProps = (nextProps, prevState) => {
-    console.log('Cito getDerivedStateFromProps', nextProps, prevState);
+    console.log('CitoInfo getDerivedStateFromProps', nextProps, prevState);
   }
 
   getSnapshotBeforeUpdate = (prevProps, prevState) => {
-    console.log('Cito getSnapshotBeforeUpdate', prevProps, prevState);
+    console.log('CitoInfo getSnapshotBeforeUpdate', prevProps, prevState);
   }
 
   componentDidUpdate = () => {
-    console.log('Cito did update');
+    console.log('CitoInfo did update');
   }
 
   componentWillUnmount = () => {
-    console.log('Cito will unmount');
+    console.log('CitoInfo will unmount');
   }
 
   render () {
@@ -45,19 +46,19 @@ class Cito extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="CitoWrapper">
-        Cito
+      <div className="CitoInfoWrapper">
+        <CitoTemplate/>
       </div>
     );
   }
 }
 
-Cito.propTypes = {
+CitoInfo.propTypes = {
   // bla: PropTypes.string,
 };
 
-Cito.defaultProps = {
+CitoInfo.defaultProps = {
   // bla: 'test',
 };
 
-export default Cito;
+export default CitoInfo;
