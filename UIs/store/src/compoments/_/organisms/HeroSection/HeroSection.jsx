@@ -23,7 +23,7 @@ const HeroSection = props => (
         name="rating"
       />
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>Launch this Cito</button>
+        <button className={styles.button} style={{borderColor: props.ctaButtonColor, color: props.ctaButtonColor}}>{props.ctaButtonText}</button>
       </div>
     </header>
   </section>
@@ -34,7 +34,8 @@ HeroSection.propTypes = {
   header: PropTypes.string,
   subHeader: PropTypes.string,
   starRating: PropTypes.number,
-  ctaButtonText: PropTypes.string
+  ctaButtonText: PropTypes.string,
+  ctaButtonColor: PropTypes.string
 };
 
 HeroSection.defaultProps = {
@@ -42,7 +43,8 @@ HeroSection.defaultProps = {
   header: "Adobe Acrobat Reader for PDF",
   subHeader: "Adobe Inc.",
   starRating: 4.5,
-  ctaButtonText: "Launch this Cito"
+  ctaButtonText: "Work in Progress",
+  ctaButtonColor: "grey"
 };
 
 export default HeroSection;

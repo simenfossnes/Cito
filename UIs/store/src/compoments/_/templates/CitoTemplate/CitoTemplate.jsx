@@ -5,6 +5,25 @@ import appImage from "../../../../images/main-app-icon.png";
 import ExpandableSection from "../../organisms/ExpandableSection/ExpandableSection";
 import HeroSection from "../../organisms/HeroSection/HeroSection";
 
+const colorBasedOnActiveStatus = (status) => {
+  switch(status) {
+    case 'idea':
+      return 'grey';
+    case 'active':
+      return '#0070c9'
+  }
+}
+
+const textBasedOnActiveStatus = (status) => {
+  switch(status) {
+    case 'idea':
+      return 'Work In Progress';
+    case 'active':
+      return 'Launch App'
+  }
+}
+
+
 const CitoTemplate = props => (
   <div className="CitoTemplateWrapper">
     <HeroSection 
@@ -12,6 +31,8 @@ const CitoTemplate = props => (
       header={props.appName}
       subHeader={props.appDeveloperName}
       starRating={props.appStarRating}
+      ctaButtonColor={colorBasedOnActiveStatus(props.appStatus)}
+      ctaButtonText={textBasedOnActiveStatus(props.appStatus)}
     />
     <ExpandableSection heading={"Description"} subHeading={"What does it do?"}>
       {props.appDescription}
@@ -20,6 +41,7 @@ const CitoTemplate = props => (
 );
 
 CitoTemplate.propTypes = {
+  appStatus: PropTypes.string,
   appImageSrc: PropTypes.string,
   appName: PropTypes.string,
   appDeveloperName: PropTypes.string,
@@ -28,6 +50,7 @@ CitoTemplate.propTypes = {
 };
 
 CitoTemplate.defaultProps = {
+  appStatus: "idea",
   appImageSrc: appImage,
   appName: "An awesome SmartCar App",
   appDeveloperName: "SmartCar Inc.",
