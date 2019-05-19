@@ -23,7 +23,13 @@ const HeroSection = props => (
         name="rating"
       />
       <div className={styles.buttonContainer}>
-        <button className={styles.button} style={{borderColor: props.ctaButtonColor, color: props.ctaButtonColor}}>{props.ctaButtonText}</button>
+        <button className={styles.button} style={{borderColor: props.ctaButtonColor, color: props.ctaButtonColor}}
+          onClick={() => {
+            if (props.ctaButtonText === "Launch App") {
+              window.location.replace('/wanted-app');
+            }
+          }}
+        >{props.ctaButtonText}</button>
       </div>
     </header>
   </section>

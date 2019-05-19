@@ -1,0 +1,22 @@
+<div class="loader-wrapper">
+    <tl-loader *ngIf="mDetections == null"></tl-loader>
+    
+    <ul *ngIf="mDetections != null">
+        <li *ngFor="let detection of mDetections">
+            <span>
+                {{detection.title}}
+            </span>
+            <br>
+            <span>
+                Location: ({{detection.lat}}, {{detection.lng}})
+            </span>
+            <br>
+            <span>
+                Time: {{detection.time}}
+            </span>
+            <br>
+            <img src="http://685048fb.ngrok.io/get_image/{{detection.photoUrl}}" alt="{{detection.photoUrl}}">
+        </li>
+    </ul>
+</div>
+

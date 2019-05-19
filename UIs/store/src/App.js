@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Catalog} />
-          <Route path="/cito/:citoId" component={CitoInfo} />
+          <Route exact path="/cito/:citoId" component={CitoInfo} />
         </Switch>
       </BrowserRouter>
     </div>
