@@ -45,9 +45,11 @@ class CitoInfo extends PureComponent {
 
   render () {
 
-    console.log('this.props.match.params: ', this.props.match.params);
-    const { citoId } = this.props.match.params;
     const dummyAppIdList = dummyApps.map(a => a.id);
+    const citoId = parseInt(this.props.match.params.citoId);
+    const cito = dummyApps.filter(a => a.id === citoId)[0];
+    
+    console.log('this.props.match.params: ', this.props.match.params.citoId);
     console.log('dummyAppIdList: ', dummyAppIdList);
 
     // check for id
@@ -61,7 +63,7 @@ class CitoInfo extends PureComponent {
     return (
       <div className="CitoInfoWrapper">
         <CitoTemplate
-          appName={'somethnig'}
+          appName={cito.name}
         />
       </div>
     );
