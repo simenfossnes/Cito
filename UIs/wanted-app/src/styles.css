@@ -3,7 +3,6 @@ body {
     height: 100%;
     margin: 0; /* Space from this element (entire page) and others*/
     padding: 0; /*space from content and border*/
-    border: solid black;
     border-width: thin;
     overflow:hidden;
     display:block;
@@ -14,4 +13,10 @@ body {
 .Content
 {
    overflow:auto;
+}
+
+.lala {
+    padding-top: 30px;
+    background-color: #00aabb;
+    color: #f3f3f3;
 }

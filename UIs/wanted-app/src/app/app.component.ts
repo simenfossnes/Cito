@@ -4,10 +4,10 @@ import {Component} from '@angular/core';
     moduleId: module.id,
     selector: 'cito-app',
     template: `
-        <h1>{{naslov}}</h1>
+        <div style="vertical-align: middle; height: 50px;"><h3 class="lala" style="padding-top: 0; height: 100%;">{{naslov}}</h3></div>
         <router-outlet></router-outlet>
     `
 })
 export class AppComponent {
-    naslov = 'App template';
+    naslov = 'WANTED';
 }

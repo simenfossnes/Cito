@@ -1,10 +1,7 @@
 <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%"></div>
-<div class="box-title">
-        Dropzone
-</div>
 
 <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
-
+        <div style="width: 100%;" align="left"><h4>Upload wanted image</h4></div>
         <dropzone *ngIf="type === 'component'" class="dropzone-container" [config]="config" [disabled]="disabled" fxLayout="row" fxLayoutAlign="start strech" fxFlex="auto" [message]="'Click or drag images here to upload'" (init)="onUploadInit($event)" (error)="onUploadError($event)" (success)="onUploadSuccess($event)" (accept)="onAddedFile($file)">
 
         </dropzone>
@@ -13,18 +10,9 @@
 
         </div>
 
-        <!-- You can now use your library component in app.component.html or other component what you want -->
-        <!-- <tl-input
-        ngModel="Many Properties"
-        [iconBefore]="'ion-printer'"
-        [placeholder]="'With Placeholder'"
-        [textAfter]="'US'"
-        [clearButton]="true"
-        [autocomplete]="'off'">
-        </tl-input> -->
 
 </div>
 
-<button class="col-12 btn btn-success" (click)="processFile()" [disabled]="mFile == null">
-        Detect
+<button class="col-12 btn btn-success" (click)="processFile()" [disabled]="mFile == null" style="margin-left: 0">
+        Start the search
 </button>

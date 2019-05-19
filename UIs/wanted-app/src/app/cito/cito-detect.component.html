@@ -1,22 +1,25 @@
-<div class="loader-wrapper">
+<div class="loader-wrapper" style="margin-left: 0; width:100%">
     <tl-loader *ngIf="mDetections == null"></tl-loader>
-    
-    <ul *ngIf="mDetections != null">
-        <li *ngFor="let detection of mDetections">
-            <span>
-                {{detection.title}}
-            </span>
-            <br>
-            <span>
-                Location: ({{detection.lat}}, {{detection.lng}})
-            </span>
-            <br>
-            <span>
-                Time: {{detection.time}}
-            </span>
-            <br>
-            <img src="http://685048fb.ngrok.io/get_image/{{detection.photoUrl}}" alt="{{detection.photoUrl}}">
-        </li>
-    </ul>
+    <br>
+    <div style="width: 100%;" align="left"><h4>Found</h4></div>
+            <div *ngFor="let detection of mDetections" align="center">
+                <hr>
+                <div style="display: inline;">
+                <img src="http://685048fb.ngrok.io/get_image/{{detection.photoUrl}}" alt="{{detection.photoUrl}}"> 
+                <div>
+                    <span>
+                        {{detection.title}}
+                    </span>
+                    <br>
+                    <span>
+                        Location: ({{detection.lat}}, {{detection.lng}})
+                    </span>
+                    <br>
+                    <span>
+                        Time: 19th of May 2019
+                    </span>
+                </div>
+            </div>
+        </div>
 </div>
 
