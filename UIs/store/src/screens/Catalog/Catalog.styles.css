@@ -31,11 +31,13 @@
 .items_all {
     align-self: stretch;
     justify-self: stretch;
+    font-size: 2vw;
 }
 
 .item_1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+    font-size: 4vw;
 }
 
 .item_2 {
@@ -53,6 +55,7 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
   }
   .module > header {
     position: absolute;
@@ -62,7 +65,8 @@
     height: 20%;
     background: inherit;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 500%;
+    background-position: right 0px bottom 0%;
   }
   .module > header::before {
     content: "";
@@ -72,15 +76,17 @@
     width: 100%;
     height: 100%;
     background: inherit;
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
-    transform: scale(2);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transform: scale(2.5);
   }
   .module > header > h1 {
     margin: 0;
     color: white;
     position: relative;
+    padding-bottom: 5px;
     z-index: 1;
+
   }
   
   * {
