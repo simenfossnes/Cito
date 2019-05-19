@@ -63,7 +63,11 @@ class CitoInfo extends PureComponent {
     return (
       <div className="CitoInfoWrapper">
         <CitoTemplate
+          appImageSrc={cito.img}
           appName={cito.name}
+          appDeveloperName={'Cito Inc.'}
+          appStarRating={cito.rating}
+          appDescription={cito.description}
         />
       </div>
     );
