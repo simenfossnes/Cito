@@ -2,14 +2,9 @@ import React, { PureComponent } from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import './Catalog.styles.css';
+import dummyApps from '../../data/dummyApps';
 
 import icon1 from '../../images/main-app-icon.png';
-import icon2 from '../../images/icons-02.png';
-import icon3 from '../../images/icons-03.png';
-import icon4 from '../../images/icons-04.png';
-import icon5 from '../../images/icons-05.png';
-import icon6 from '../../images/icons-06.png';
-import icon7 from '../../images/icons-07.png';
 
 class AppBase extends PureComponent {
 
@@ -30,13 +25,13 @@ class Grid1 extends PureComponent {
 
   render() {
 
-    let apps = [{id: "2", name: "PowerBank", img: icon2}, {id: "3", name: "Help", img: icon3}, {id: "4", name: "RoboTaxi", img: icon4}, {id: "5", name: "StreetView", img: icon5}, {id: "6", name: "Computer", img: icon6}, {id: "7", name: "Delivery", img: icon7}];
+    
 
     return <div className="grid_unequal">
             <div className="item_1 items_all">
               <Link to="/cito/1" ><AppBase name="Wanted" img={icon1}/></Link>
             </div>
-            {apps.map((app) => 
+            {dummyApps.map((app) => 
             <div className="items_all"><Link to={"/cito/" + app.id} ><AppBase name={app.name} img={app.img} /></Link></div>)}
           </div>;
   }
