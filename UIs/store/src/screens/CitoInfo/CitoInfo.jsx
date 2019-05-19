@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './CitoInfo.styles.css';
 import CitoTemplate from '../../compoments/_/templates/CitoTemplate/CitoTemplate';
 import dummyApps from '../../data/dummyApps';
+import NavBar from '../../compoments/_/organisms/NavBar/NavBar2';
 
 class CitoInfo extends PureComponent { 
   constructor(props) {
@@ -62,6 +63,7 @@ class CitoInfo extends PureComponent {
     }
     return (
       <div className="CitoInfoWrapper">
+        <NavBar  />
         <CitoTemplate
           appStatus={cito.status}
           appImageSrc={cito.img}
